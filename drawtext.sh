@@ -1,0 +1,3 @@
+printf "视频文件=%s\n" $1
+
+ffmpeg -re -i $1 -vcodec libx264 -s 1080*720 -vf  "[in]drawtext=fontfile=/Windows/Fonts/simhei.ttf:x=w*0.6*sin(t)*sin(t):y=20:fontcolor=white:fontsize=60:text='%{localtime\:%Y\\\-%m\\\-%d}' ,drawtext=fontfile=/Windows/Fonts/simhei.ttf:x=w*0.7*sin(t)*sin(t):y=90:fontcolor=white:fontsize=60:text='%{localtime\:%H\\\:%M\\\:%S\}',drawtext=fontfile=/Windows/Fonts/simhei.ttf:x=w*0.8*sin(t)*sin(t):y=160:fontcolor=white:fontsize=60:text="搜索12345"[out]"  -f flv rtmp://192.168.1.111/oflaDemo/live
