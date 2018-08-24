@@ -1,0 +1,1 @@
+ffplay test.mp4 -vf "drawtext=text='drawtext':x=mod(n*4\,w):y=100"
