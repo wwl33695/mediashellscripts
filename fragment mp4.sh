@@ -1,1 +1,2 @@
- ffmpeg -i /e/files/frag_bunny.mp4 -c copy -f mp4 -movflags frag_keyframe+empty_moov frag.mp4
+#fmp4 used in html5
+ffmpeg -i 1.mp4 -c copy -movflags frag_keyframe+separate_moof+faststart+empty_moov+omit_tfhd_offset frag.mp4
