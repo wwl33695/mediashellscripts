@@ -1,6 +1,9 @@
 
 #flvflags fflags movflags
 
+#查看是否支持 add_keyframe_index
+ffmpeg -hide_banner -h muxer=flv
+
 #flv 流化
 ffmpeg -i 1.mp4 -c copy -flvflags add_keyframe_index 1.flv
 
